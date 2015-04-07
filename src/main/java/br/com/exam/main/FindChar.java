@@ -6,16 +6,26 @@ import java.util.Map;
 import br.com.exam.api.StreamAPI;
 
 /**
- * Classe com metodo utilirio que recebe um Stream de chars e localiza o
+ * Classe com metodo utilitario que recebe um Stream de chars e localiza o
  * primeiro caractere nao repetido
- * 
  */
 public class FindChar {
 
+	/**
+	 * Dado uma Stream, verifica qual o primeiro caracter nao repetido e o retorna
+	 * Caso nao exista um caracter nao repetido retorna 0
+	 * @param input - Stream contendo os caracteres
+	 * @return um primeiro caracter que tenha sido encontrado apenas uma vez
+	 */
 	public static char firstChar(StreamAPI input) {
 
 		// Utilizado LinkedHashMap para manter a ordem em que os elementos foram
 		// inseridos
+		
+		if (input == null) {
+			return 0;
+		}
+		
 		Map<Character, Integer> characterMap = new LinkedHashMap<Character, Integer>();
 		while (input.hasNext()) {
 			char currentChar = input.getNext();

@@ -3,10 +3,12 @@ package br.com.exam.impl;
 import br.com.exam.api.StreamAPI;
 
 /**
- * Essa classe eh responsavel por armazenar u
+ * Classe eh responsavel por implementar uma Stream.
+ * Sera passado no construtor uma String representando uma Stream.
  * 
- * @author abd
- *
+ * Nessa implementacao eh possivel ler todos os itens da Stream um a um entretanto, uma vez
+ * alcançado o fim da Stream, nao eh possivel reiniciar seu fluxo da leitura.
+ * 
  */
 public class StreamStringImpl implements StreamAPI {
 

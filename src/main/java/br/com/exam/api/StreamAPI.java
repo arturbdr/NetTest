@@ -1,7 +1,7 @@
 package br.com.exam.api;
 
 /**
- * Interface com metodos 
+ * Interface com metodos a serem implementados
  */
 public interface StreamAPI {
 	

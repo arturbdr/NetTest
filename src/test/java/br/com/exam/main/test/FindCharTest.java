@@ -8,6 +8,10 @@ import br.com.exam.api.StreamAPI;
 import br.com.exam.impl.StreamStringImpl;
 import br.com.exam.main.FindChar;
 
+/**
+ * classe com testes unitarios. Testa as condicoes de sucesso e casos imprevistos
+ *
+ */
 public class FindCharTest {
 
 	@Test
@@ -28,7 +32,11 @@ public class FindCharTest {
 	@Test
 	public void testMatchNotFound() {
 		StreamAPI streamOne = new StreamStringImpl("aaaa"); // Nao existe primeiro nao repetido
+		StreamAPI streamTwo = new StreamStringImpl(""); // Nao existe primeiro nao repetido
+		StreamAPI streamThree = null; // Nao existe primeiro nao repetido
 		
 		assertEquals(0, FindChar.firstChar(streamOne));
+		assertEquals(0, FindChar.firstChar(streamTwo));
+		assertEquals(0, FindChar.firstChar(streamThree));
 	}
 }
